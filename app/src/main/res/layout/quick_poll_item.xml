@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.a12jg1.quickpolls.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape"
+    >
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Is there anything worse than a reverse threaded screw"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/option_one_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Yes"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintLeft_toLeftOf="@+id/titleTextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/option_two_TextView"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:text="No"
+        app:layout_constraintTop_toBottomOf="@+id/option_one_TextView"
+        app:layout_constraintLeft_toLeftOf="@+id/titleTextView"
+        android:textStyle="bold|italic"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageButtonUp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_keyboard_arrow_up_white_24px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/titleTextView"/>
+
+    <ImageView
+        android:id="@+id/imageButtonDown"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonUp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/popularity_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        android:text="0"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonDown"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDown"
+        android:layout_marginStart="8dp" />
+
+    <ImageView
+        android:id="@+id/poll_creator_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:srcCompat="@drawable/ic_person_black_24dp"
+        app:layout_constraintLeft_toRightOf="@+id/popularity_counter"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/poll_creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Anonymous"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/poll_creator_image"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/option_one_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold|italic"
+        android:text="**%"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/option_one_TextView"
+        app:layout_constraintLeft_toRightOf="@id/option_one_TextView"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/option_two_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold|italic"
+        android:text="**%"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/option_two_TextView"
+        app:layout_constraintLeft_toRightOf="@id/option_two_TextView"/>
+
+</android.support.constraint.ConstraintLayout>
